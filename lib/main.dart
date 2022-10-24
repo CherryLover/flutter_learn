@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './row_page.dart';
 import './list_view_page.dart';
+import './net_test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         // "row_page": (context) => const RowPage(title: 'Row Page'),
         "row_page": (context) => const RowPage(title: 'Row Page'),
         "ListViewPage": (context) => const ListViewPage(),
+        "NetTestPage": (context) => const NetTestPage(),
       },
       home: const MyHomePage(title: 'Home Page'),
     );
@@ -65,11 +67,19 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("Row Page"),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, "ListViewPage");
               },
               child: Text("ListView Page"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "NetTestPage");
+              },
+              child: Text("Net Work Page"),
             ),
           ],
         ),
